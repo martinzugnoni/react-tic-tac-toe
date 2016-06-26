@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <style>
+      .container{
+        margin-top: 20px;
+      }
+      .game-container{
+        width: 500px;
+      }
+      .board-container{
+        margin-top: 20px;
+      }
+      .board-container .row{
+        margin-bottom: 20px;
+      }
+      .board-container .game-cell button{
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .player-info{
+        font-size: 30px;
+      }
+      .player-info span{
+        color: #419641;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DOM element to insert React components -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="center-block game-container" style="">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <h1>React - Tic Tac Toe</h1>
+              </div>
+            </div>
+            <div class="row board-container">
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-primary disabled" type="submit">X</button>
+                  </div>
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-default" type="submit">?</button>
+                  </div>
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-default" type="submit">?</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-default" type="submit">?</button>
+                  </div>
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-primary disabled" type="submit">X</button>
+                  </div>
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-default" type="submit">?</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-success disabled" type="submit">O</button>
+                  </div>
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-default" type="submit">?</button>
+                  </div>
+                  <div class="col-xs-4 game-cell">
+                    <button class="btn btn-default" type="submit">?</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center player-info">
+              <p>Next player: <span>O</span></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

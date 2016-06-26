@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom'
+import TicTacToeGame from './app/TicTacToeGame'
 
 render(
-  <h1>Hello World</h1>,
+  <TicTacToeGame />,
   document.getElementById('app')
 );
