@@ -1,13 +1,6 @@
-# React Seed
+# React Tic-Tac-Toe
 
-Simple seed project to kick off a minimal ES6+React project with Webpack and Babel. No redux, no GraphQL, nothing but plain old React.
-
-You'll want to clone this repo and re-initialize its git history:
-
-    $ git clone && cd $_
-    $ rm -Rf .git
-
-You probably also want to add your own info in `package.json`.
+Simple Tic-Tac-Toe implementation using ES6+React with Webpack and Babel. No redux, no GraphQL, nothing but plain old React.
 
 ## Setup and installation
 
