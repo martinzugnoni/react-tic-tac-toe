@@ -3,9 +3,6 @@ import _ from 'lodash';
 
 
 class GameButton extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
         let buttonValue = this.props.value === null
             ? "?"
@@ -34,11 +31,8 @@ class GameButton extends React.Component {
 
 
 class GameRow extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
-        let gameButtons = _.map([0, 1, 2], (val) => {
+        let gameButtons = [0, 1, 2].map((val) => {
             return <GameButton
                      rowNum={this.props.rowNum}
                      colNum={val}
@@ -56,9 +50,6 @@ class GameRow extends React.Component {
 
 
 class GameStatus extends React.Component {
-    constructor() {
-        super();
-    }
     render() {
         if (this.props.gameOver) {
             if (this.props.winner) {
@@ -91,7 +82,9 @@ class TicTacToeGame extends React.Component {
         Returns true if given combinationValues
         is ["X", "X", "X"] or ["O", "O", "O"], or false otherwise.
         */
-        return !_.without(combinationValues, "X", "O").length
+        let xWins = !_.without(combinationValues, "X").length;
+        let oWins = !_.without(combinationValues, "O").length;
+        return xWins || oWins;
     }
     checkWinningCombinations() {
         /*
@@ -185,7 +178,7 @@ class TicTacToeGame extends React.Component {
         });
     }
     render() {
-        let gameRows = _.map([0, 1, 2], (val) => {
+        let gameRows = [0, 1, 2].map((val) => {
             return <GameRow
                     rowNum={val}
                     boardRow={this.state.board[val]}
